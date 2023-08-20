@@ -12,7 +12,7 @@ public class Run {
 		TestService service = new TestService();
 		
 		// TB_TEST 테이블에 INSERT 수행
-		TestVO vo1 = new TestVO(1, "제목1", "내용1");
+		TestVO vo1 = new TestVO(2, "제목2", "내용2");
 		
 		// TB_TEST 테이블에 INSERT를 수행하는 서비스 메서드를 호출 후
 		// 결과 반환받기

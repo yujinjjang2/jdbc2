@@ -109,4 +109,29 @@ public class TestDAO {
 		return result;
 	}
 
+
+	public int delete(Connection conn, int deleteNum) throws Exception{
+		
+		int result = 0;
+		
+		try {
+			
+			String sql = prop.getProperty("delete");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, deleteNum);
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			
+			close(pstmt);
+			
+		}
+		
+		
+		return result;
+	}
+
 }

@@ -16,4 +16,8 @@
 		WHERE TEST_NO = ?
 	</entry>
 	
+	<entry key="delete">
+		DELETE FROM TB_TEST WHERE TEST_NO = ?
+	</entry>
+	
 </properties>

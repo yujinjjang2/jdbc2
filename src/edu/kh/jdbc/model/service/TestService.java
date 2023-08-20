@@ -95,4 +95,19 @@ public class TestService {
 		return result;
 	}
 
+
+	public int delete(int deleteNum) throws Exception{
+		
+		Connection conn = getConnection();
+		
+		int result = dao.delete(conn, deleteNum);
+		
+		if(result > 0) commit(conn);
+		else			rollback(conn);
+		
+		close(conn);
+		
+		return result;
+	}
+
 }
